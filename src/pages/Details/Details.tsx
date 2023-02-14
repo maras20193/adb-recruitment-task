@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getUsers } from "../../api/users";
-import { List, Modal, UserItem } from "../../components";
+import { Button, List, Modal, UserItem } from "../../components";
 import { useModal } from "../../hooks";
 import { AddModalBody } from "./components";
 import * as S from "./Details.styled";
@@ -21,6 +21,7 @@ export const Details = () => {
   useEffect(() => {
     fetchUsers();
   }, []);
+
   return (
     <S.Wrapper>
       <List title="Manage users">
@@ -28,9 +29,7 @@ export const Details = () => {
           <UserItem key={user.name} user={user} extended />
         ))}
       </List>
-      <button type="button" onClick={handleModalOpen}>
-        Add new User
-      </button>
+      <Button.Primary onClick={handleModalOpen}>Add new User</Button.Primary>
       <Modal
         isOpen={isModalOpen}
         onClose={handleModalClose}
