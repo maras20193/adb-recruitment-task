@@ -18,6 +18,7 @@ export const Link = styled(NavLink)`
   flex-direction: row;
 
   font-size: 18px;
+  letter-spacing: 0.05rem;
   text-transform: uppercase;
   text-decoration: none;
   color: ${({ theme }) => theme.colors.text};
