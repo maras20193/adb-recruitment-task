@@ -16,6 +16,7 @@ function App() {
             <Route path={routes.posts} element={<Posts />} />
             <Route path={routes.photos} element={<Photos />} />
             <Route path={routes.details} element={<Details />} />
+            <Route path={`${routes.posts}/:userId`} element={<Posts />} />
           </Routes>
         </Layout>
       </BrowserRouter>

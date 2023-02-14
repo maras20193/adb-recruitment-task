@@ -1,4 +1,5 @@
 import { deleteIcon, editIcon } from "../../assets";
+import { routes } from "../../utils/routes";
 import { IconButton } from "../IconButton/IconButton";
 import * as S from "./UserItem.styled";
 
@@ -13,7 +14,7 @@ export const UserItem = ({ user, extended }: UserItemProps) => {
   };
   return (
     <S.ItemWrapper>
-      <p>{user.name}</p>
+      <S.PostLink to={`${routes.posts}/${user.id}`}>{user.name}</S.PostLink>
       {extended ? (
         <S.IconsWrapper>
           <IconButton icon={editIcon} onClick={handleClick} alt="edit" />

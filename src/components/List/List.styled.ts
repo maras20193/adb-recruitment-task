@@ -3,7 +3,10 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 30px 0;
 `;
 
 export const Header = styled.h1`
@@ -16,6 +19,6 @@ export const Header = styled.h1`
 export const List = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
   letter-spacing: 0.1rem;
 `;
