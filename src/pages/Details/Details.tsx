@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import { getUsers } from "../../api/users";
-import { List, UserItem } from "../../components";
+import { List, Modal, UserItem } from "../../components";
+import { useModal } from "../../hooks";
+import { AddModalBody } from "./components";
 import * as S from "./Details.styled";
 
 export const Details = () => {
   const [users, setUsers] = useState<User[]>([]);
+  const { isModalOpen, handleModalClose, handleModalOpen } = useModal();
 
   const fetchUsers = async () => {
     try {
@@ -22,9 +25,19 @@ export const Details = () => {
     <S.Wrapper>
       <List title="Manage users">
         {users.map((user) => (
-          <UserItem user={user} extended />
+          <UserItem key={user.name} user={user} extended />
         ))}
       </List>
+      <button type="button" onClick={handleModalOpen}>
+        Add new User
+      </button>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={handleModalClose}
+        title="Add new user"
+      >
+        <AddModalBody />
+      </Modal>
     </S.Wrapper>
   );
 };

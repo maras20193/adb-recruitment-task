@@ -37,7 +37,7 @@ export const Posts = () => {
         }
       >
         {posts.map((post) => (
-          <PostItem post={post} />
+          <PostItem key={post.id} post={post} />
         ))}
       </List>
     </S.Wrapper>

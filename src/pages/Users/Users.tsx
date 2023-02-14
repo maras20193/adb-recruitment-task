@@ -22,7 +22,7 @@ export const Users = () => {
     <S.Wrapper>
       <List title="Users List">
         {users.map((user) => (
-          <UserItem user={user} />
+          <UserItem key={user.name} user={user} />
         ))}
       </List>
     </S.Wrapper>
