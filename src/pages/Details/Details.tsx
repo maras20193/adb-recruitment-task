@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 import { getUsers } from "../../api/users";
 import { Button, List, Modal, UserItem } from "../../components";
 import { useModal } from "../../hooks";
@@ -14,7 +15,7 @@ export const Details = () => {
       const response = await getUsers();
       setUsers(response.data);
     } catch (err) {
-      console.log("ERRORR");
+      toast.error("Error has occurred, please try again later.");
     }
   };
 

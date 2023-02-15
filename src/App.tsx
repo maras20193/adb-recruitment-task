@@ -1,9 +1,11 @@
 import { ThemeProvider } from "styled-components";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import { GlobalStyle, theme } from "./styles";
 import { Details, Photos, Posts, Users } from "./pages";
 import { routes } from "./utils/routes";
 import { Layout } from "./template";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
           </Routes>
         </Layout>
       </BrowserRouter>
+      <ToastContainer newestOnTop position="top-right" />
     </ThemeProvider>
   );
 }

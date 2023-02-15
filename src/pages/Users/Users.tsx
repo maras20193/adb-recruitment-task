@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 import { getUsers } from "../../api/users";
 import { List, UserItem } from "../../components";
 import * as S from "./Users.styled";
@@ -11,7 +12,7 @@ export const Users = () => {
       const response = await getUsers();
       setUsers(response.data);
     } catch (err) {
-      console.log("ERRORR");
+      toast.error("Error has occurred, please try again later.");
     }
   };
 

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 import { getPosts } from "../../api/posts";
 import { List, PostItem } from "../../components";
 import * as S from "./Posts.styled";
@@ -20,7 +21,7 @@ export const Posts = () => {
         setPosts(response.data);
       }
     } catch (err) {
-      console.log("ERRORR");
+      toast.error("Error has occurred, please try again later.");
     }
   };
 
