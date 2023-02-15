@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/adb-recruitment-task/static/css/main.b3eeeea7.css",
+    "main.js": "/adb-recruitment-task/static/js/main.1ab9f71d.js",
+    "static/js/787.6c5e78bf.chunk.js": "/adb-recruitment-task/static/js/787.6c5e78bf.chunk.js",
+    "static/media/editIcon.svg": "/adb-recruitment-task/static/media/editIcon.b559e36e79b37463181e3b196844a3d6.svg",
+    "index.html": "/adb-recruitment-task/index.html",
+    "static/media/avatar.svg": "/adb-recruitment-task/static/media/avatar.69b2d17c076da524b62adeff96babbb8.svg",
+    "static/media/deleteIcon.svg": "/adb-recruitment-task/static/media/deleteIcon.4290374e671f0e773b445b9160587197.svg",
+    "main.b3eeeea7.css.map": "/adb-recruitment-task/static/css/main.b3eeeea7.css.map",
+    "main.1ab9f71d.js.map": "/adb-recruitment-task/static/js/main.1ab9f71d.js.map",
+    "787.6c5e78bf.chunk.js.map": "/adb-recruitment-task/static/js/787.6c5e78bf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b3eeeea7.css",
+    "static/js/main.1ab9f71d.js"
+  ]
+}
