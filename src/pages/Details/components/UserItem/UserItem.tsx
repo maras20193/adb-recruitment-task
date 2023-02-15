@@ -1,10 +1,10 @@
-import { deleteIcon, editIcon } from "../../assets";
+import { deleteIcon, editIcon } from "../../../../assets";
 
-import { UserModalsContainer } from "../../pages/Details/components";
+import { UserModalsContainer } from "..";
 
-import { useUsersModals } from "../../pages/Details/hooks/useUsersModals";
-import { routes } from "../../utils/routes";
-import { IconButton } from "../IconButton/IconButton";
+import { useUsersModals } from "../../hooks/useUsersModals";
+import { routes } from "../../../../utils/routes";
+import { IconButton } from "../../../../components/IconButton/IconButton";
 import * as S from "./UserItem.styled";
 
 type UserItemProps = {

@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { fadeVariant } from "../../animations";
 import { getUsers } from "../../api/users";
-import { List, Loader, UserItem } from "../../components";
+import { List, Loader } from "../../components";
+import { UserItem } from "../Details/components";
 import * as S from "./Users.styled";
 
 export const Users = () => {

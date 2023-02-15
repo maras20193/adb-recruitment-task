@@ -34,7 +34,7 @@ export const UserModalsContainer = ({ modals, user }: UserModalsType) => (
     >
       <DeleteModalBody
         closeModal={modals.delete.handleModalClose}
-        userId={user.id}
+        user={user}
       />
     </Modal>
   </>

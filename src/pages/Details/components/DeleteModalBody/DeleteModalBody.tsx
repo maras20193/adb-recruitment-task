@@ -6,22 +6,19 @@ import * as S from "./DeleteModalBody.styled";
 
 export type DeleteModalBodyProps = {
   closeModal: () => void;
-  userId: number;
+  user: User;
 };
 
-export const DeleteModalBody = ({
-  closeModal,
-  userId,
-}: DeleteModalBodyProps) => {
+export const DeleteModalBody = ({ closeModal, user }: DeleteModalBodyProps) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const handleDelete = async () => {
     try {
       setIsLoading(true);
-      await deleteUser(userId);
+      await deleteUser(user.id);
       await getUsers();
       closeModal();
-      toast.error(`You successfuly deleted user: ${userId}`);
+      toast.success(`You successfuly deleted user: ${user.name}`);
     } catch {
       toast.error("Error has occured. Please try again later");
     }

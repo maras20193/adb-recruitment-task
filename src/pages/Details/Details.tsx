@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { fadeVariant } from "../../animations";
 import { getUsers } from "../../api/users";
-import { Button, List, Loader, Modal, UserItem } from "../../components";
+import { Button, List, Loader, Modal } from "../../components";
 import { useModal } from "../../hooks";
-import { AddModalBody } from "./components";
+import { AddModalBody, UserItem } from "./components";
 import * as S from "./Details.styled";
 
 export const Details = () => {
