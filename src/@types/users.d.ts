@@ -21,3 +21,7 @@ declare type User = {
     bs: string;
   };
 };
+
+declare type MockAddUserData = {
+  name: string;
+};

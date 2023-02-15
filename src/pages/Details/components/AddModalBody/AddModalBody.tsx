@@ -36,7 +36,7 @@ export const AddModalBody = ({ closeModal }: AddModalBodyProps) => {
       await addUser(data);
       await getUsers();
       closeModal();
-      toast.success("You successfuly add new user");
+      toast.success(`You successfuly add new user: ${data.name}`);
     } catch {
       toast.error("Tou can not add new user. Please try again later");
     }
