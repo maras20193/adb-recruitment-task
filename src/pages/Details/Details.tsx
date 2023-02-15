@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
+import { fadeVariant } from "../../animations";
 import { getUsers } from "../../api/users";
 import { Button, List, Loader, Modal, UserItem } from "../../components";
 import { useModal } from "../../hooks";
@@ -27,7 +28,7 @@ export const Details = () => {
   }, []);
 
   return (
-    <S.Wrapper>
+    <S.Wrapper animate="onscreen" initial="offscreen" variants={fadeVariant}>
       <List title="Manage users">
         {users.map((user) => (
           <UserItem key={user.name} user={user} extended />

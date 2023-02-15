@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
+import { fadeVariant } from "../../animations";
 import { getPosts } from "../../api/posts";
 import { List, Loader, PostItem } from "../../components";
 import * as S from "./Posts.styled";
@@ -32,7 +33,7 @@ export const Posts = () => {
     fetchPosts();
   }, []);
   return (
-    <S.Wrapper>
+    <S.Wrapper animate="onscreen" initial="offscreen" variants={fadeVariant}>
       <List
         title={
           params.userId
