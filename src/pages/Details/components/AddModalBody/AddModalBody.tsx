@@ -52,7 +52,7 @@ export const AddModalBody = ({ closeModal }: AddModalBodyProps) => {
           error={errors?.name?.message}
         />
         <Button.Primary
-          style={{ width: "200px" }}
+          style={{ width: "200px", alignSelf: "flex-end" }}
           isLoading={isLoading}
           disabled={isLoading}
         >

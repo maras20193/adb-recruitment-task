@@ -6,7 +6,7 @@ export const Button = styled.button`
   align-items: center;
   width: 30px;
   height: 30px;
-  padding: 3px;
+  padding: 8px;
   border: none;
   background-color: ${({ theme }) => theme.colors.primary};
   border-radius: 50%;

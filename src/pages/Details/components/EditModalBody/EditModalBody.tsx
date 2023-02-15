@@ -56,13 +56,14 @@ export const EditModalBody = ({ closeModal, user }: EditModalBodyProps) => {
           label="Name: "
           {...register("name")}
           error={errors?.name?.message}
+          placeholder={user.name}
         />
         <Button.Primary
-          style={{ width: "200px" }}
+          style={{ width: "160px", alignSelf: "flex-end" }}
           isLoading={isLoading}
           disabled={isLoading}
         >
-          Add new user
+          Save
         </Button.Primary>
       </form>
     </S.Wrapper>
