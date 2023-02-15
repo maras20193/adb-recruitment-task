@@ -36,7 +36,7 @@ export const Details = () => {
         onClose={handleModalClose}
         title="Add new user"
       >
-        <AddModalBody />
+        <AddModalBody closeModal={handleModalClose} />
       </Modal>
     </S.Wrapper>
   );

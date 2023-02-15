@@ -32,7 +32,7 @@ export const UserItem = ({ user, extended }: UserItemProps) => {
               alt="delete"
             />
           </S.IconsWrapper>
-          <UserModalsContainer modals={modals} />
+          <UserModalsContainer modals={modals} user={user} />
         </>
       ) : null}
     </S.ItemWrapper>

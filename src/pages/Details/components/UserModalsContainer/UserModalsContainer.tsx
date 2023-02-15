@@ -15,23 +15,27 @@ type UserModalsType = {
       handleModalOpen: () => void;
     };
   };
+  user: User;
 };
 
-export const UserModalsContainer = ({ modals }: UserModalsType) => (
+export const UserModalsContainer = ({ modals, user }: UserModalsType) => (
   <>
     <Modal
       isOpen={modals.edit.isModalOpen}
       onClose={modals.edit.handleModalClose}
       title="Edit user"
     >
-      <EditModalBody />
+      <EditModalBody closeModal={modals.edit.handleModalClose} user={user} />
     </Modal>
     <Modal
       isOpen={modals.delete.isModalOpen}
       onClose={modals.delete.handleModalClose}
       title="Delete user"
     >
-      <DeleteModalBody />
+      <DeleteModalBody
+        closeModal={modals.delete.handleModalClose}
+        userId={user.id}
+      />
     </Modal>
   </>
 );
